@@ -27,6 +27,7 @@ io.on('connect', (socket) => {
         socket.username = username;
         socket.room = room;
         socket.join(socket.room, (err, res) => {
+            console.log(res);
             if(res) {
                 consoleLog('chat', `[${socket.room}]`, `[${socket.username}]`.bold + ' join channel with IP ' + `${socket.ip}`.yellow);
             }
